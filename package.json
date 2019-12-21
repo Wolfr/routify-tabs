@@ -16,7 +16,9 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack-dev-server --content-base public"
+    "dev": "run-p watch:routify watch:webpack",
+    "watch:webpack": "webpack-dev-server --content-base public",
+    "watch:routify": "routify"
   },
   "dependencies": {}
 }
